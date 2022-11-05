@@ -20,13 +20,12 @@ If using google colab
 >**This will also change, for now just experimenting**
 
 ## Data exploration example below
-Still working on description
-
-    - The csv files were imported, variable created and data cleaned.
+    - The csv files were imported, and variables were created and the data was cleaned.
     - Pandas DataFrame was created.
     - try...except statements were used for testing.
-    - DataFrames were merged
-    - Dropped null data from dataframe
+    - DataFrames were mereged.
+    - Dropped null data from dataframe.
+
 
 ## Week One: 
 
