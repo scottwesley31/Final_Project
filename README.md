@@ -25,7 +25,7 @@ If using google colab
   - The csv files were imported, and variables were created and the data was cleaned.
   - Pandas DataFrame was created.
   - try...except statements were used for testing.
-  - DataFrames were mereged.
+  - DataFrames were merged.
   - Dropped null data from dataframe.
 
 
