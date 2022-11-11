@@ -13,48 +13,32 @@
         />
         <link rel="stylesheet" href="static/css/style.css"> 
     </head>
-    <body class = "bg-dark">
+    <body style="backgraund-color:black;">
         <div class = "wrapper">
             <!-- NAVBAR -->
-            <nav class = "navbar navbar-dark bg-dark navbar-expand-lg">
-                <a class = "navbar-brand" href = "index.html"> LaunchIT</a>
+            <nav class = "navbar navbar-dark black navbar-expand-lg">
+                <a class = "navbar-brand" href = "index.html">Think Big Search Smart</a>
             </nav> 
             <!-- JUMBOTRON -->  
             <div class = "jumbotron">
-                <h1 class = "display-4">Can you start a Business?</h1>
+                <div class = "container" style="height: 500px;">...</div>
+                
+                
             </div>
 
             <!-- Artilce title and paragraph-->
             <div class = "container-fluid">
                 <div class = "row">
                     <div class = "col-md-4 article-title">
-                        <h3>UFO Sightings: Fact or Fancy? <small>Ufologists Weigh In</small></h3>
+                        <h1 class = "display-4">Startup?</h1>
+                        <h3><small>How companies are doing?</small></h3>
+                        <p>Use the interactive charts below to explore the dataset</p>
                     </div>
                     <div class = "col-md-8 article-p">
-                        <p>
-                            Are we alone in the universe? For millennia, humans have turned 
-                            to the sky to answer this question. Now, thanks to research 
-                            generously funded by W. Avy, a UFO-enthusiast and amateur ufologist, 
-                            we can supplement our sky-searching with data analysis.<br><br>"The 
-                            release of this analysis is well-timed: It coincides with the 
-                            celebration of World UFO Day, which is a moment for ufologists 
-                            around the world to connect, relax, and sample a range of UFO-themed 
-                            snacks," said Dr. Ursula F. Olivier, the world's preeminent 
-                            expert on circular sightings. "Citizen-scientists can be especially 
-                            helpful in both cataloguing sightings—which is hugely helpful for 
-                            us in our search for aliens—and in helping us celebrate the work 
-                            that has already been done, such as this data visualization 
-                            project, which will help us raise awareness of the ubiquity of 
-                            sightings!" <br><br>Not everyone is ready to celebrate, however. 
-                            Local CEO and vocal anti-alien activist V. Isualize reached out 
-                            to our reporters to go on record as firmly opposed to any 
-                            attempts to provide access to this data. "If there are aliens, 
-                            they certainly would like to be left alone," she stated, before 
-                            directing us to the Leave Aliens Alone (LAA) community engagement 
-                            initiative she founded and funds.<br><br>So what do YOU think? 
-                            Are we alone in the universe? Are aliens trying to contact us, or 
-                            do they want to be left alone? Dig through the data yourself, 
-                            and let us know what you see.
+                        <p>A startup is the living embodiment of a founder’s dream, It represents the journey from concept to reality. It is one of the few times when you can take something that is only a dream and make it a reality, not just for yourself, but for the entire world.
+                           Both startup owners, definitions of what a startup is are examples of big-picture thinking; a big-tent approach to defining “startup.” But there’s another side to the definition of “startup:” the nitty-gritty. The details. The little things that make one company a startup and another a small business and another a corporation.
+
+                            
                         </p>
                     </div>
                 </div>
@@ -63,35 +47,46 @@
             <div class = "container-fluid">
                 <div class = "row">
                     <div class = "col-md-3">
-                        <form class = "bg-dark">
+                        <form class = "black">
                             <p>Filter Search</p>
-                            <ul class = "list-group bg-dark">
-                                <li class = "list-group-item bg-dark">
-                                    <label for = "date">Enter Date</label>
-                                    <input type = "text" placeholder = "1/10/2010" id = "datetime" />
+                            <ul class = "list-group black">
+                                <li class "black">
+                                    <label for = "Industry">Enter Industry</label>
+                                    <input type = "text" placeholder =  id = "datetime" />
+                                    <select></select>
                                 </li>
-                            <ul class = "list-group bg-dark">
-                                <li class = "list-group-item bg-dark">
+                                <ul class = "list-group black">
+                                    <li class = "black">
+                                        <label for = "Company">Enter a Company</label>
+                                        <input type = "text" id = "shape"/>
+                                        <select></select>
+                                    </li>   
+                            <ul class = "list-group black">
+                                <li class = "black">
                                     <label for = "city">Enter a City</label>
-                                    <input type = "text" id = "city"/>
+                                    <input type = "text" placeholder = id = "city"/>
+                                    <select></select>
                                 </li>
-                            <ul class = "list-group bg-dark">
-                                <li class = "list-group-item bg-dark">
+                            <ul class = "list-group black">
+                                <li class = "black">
                                     <label for = "state">Enter a State</label>
-                                    <input type = "text" placeholder = "ca" id = "state"/>
+                                    <input type = "text" placeholder =  id = "state"/>
+                                    <select></select>
                                 </li>
-                            <ul class = "list-group bg-dark">
-                                <li class = "list-group-item bg-dark">
+                            <ul class = "list-group black">
+                                <li class = "black">
                                     <label for = "country">Enter a Country</label>
-                                    <input type = "text" placeholder = "us" id = "country"/>
+                                    <input type = "text" placeholder =  id = "country"/>
+                                    <select></select>
                                 </li>
-                            <ul class = "list-group bg-dark">
-                                <li class = "list-group-item bg-dark">
-                                    <label for = "shape">Enter a Shape</label>
+                            <ul class = "list-group black">
+                                <li class = "black">
+                                    <label for = "Year">Enter a Year</label>
                                     <input type = "text" id = "shape"/>
+                                    <select></select>
                                 </li>
-                                <li class = "list-group-item bg-dark">
-                                    <button id = "filter-btn" type = "button" class = "btn btn-dark">
+                                <li class = "black">
+                                    <button id = "filter-btn" type = "button" class = "black">
                                     Reset Table
                                     </button>
                                 </li>
@@ -103,13 +98,14 @@
                         <table class = "table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Date</th>
+                                    <th>Industry</th>
+                                    <th>Company</th>
                                     <th>City</th>
                                     <th>State</th>
                                     <th>Country</th>
-                                    <th>Shape</th>
-                                    <th>Duration</th>
-                                    <th>Comments</th>
+                                    <th>Year</th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
