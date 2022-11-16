@@ -31,8 +31,6 @@ If using google colab
   - The dataframes were both loaded to separate tables in an AWS database for the team to use in creation of ML models.
 
 
-## Week One: 
-
 ### Repository Management (Square)
 
 
