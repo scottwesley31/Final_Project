@@ -1,4 +1,4 @@
-<img src="https://github.com/pcar22/python_ml_practice/blob/python-3.22/Launch_IT_7.png" alt="drawing" width=1100 height=300/>
+<img src="https://github.com/scottwesley31/Final_Project/blob/main/static/images/Launch_IT_7.png" alt="drawing" width=1100 height=300/>
 
 <h1 align="center">A machine learning model to predict success in a business from the time of an Initial Public Offering (IPO)</h1>
 <!---A machine learning model to predict success in a business from the time of an Initial Public Offering (IPO)-->
