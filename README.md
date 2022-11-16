@@ -1,5 +1,7 @@
-# Launch-It
-A machine learning app to predict success in a business from the time of an IPO.
+<img src="https://github.com/scottwesley31/Final_Project/blob/main/static/images/Launch_IT_7.png" alt="drawing" width=1100 height=300/>
+
+<h1 align="center">A machine learning model to predict success in a business from the time of an Initial Public Offering (IPO)</h1>
+<!---A machine learning model to predict success in a business from the time of an Initial Public Offering (IPO)-->
 
 ## What business would you like to start?
 The group was interested in IPO's for the past 4 years, to determine which sector, type of business or country affected the success.
@@ -29,11 +31,6 @@ If using google colab
   - DataFrames were created based on the datasets harvested of historical stock data and qualitative compnay information.
   - Dropped null data from dataframe.
   - The dataframes were both loaded to separate tables in an AWS database for the team to use in creation of ML models.
-
-
-## Week One: 
-
-### Repository Management (Square)
 
 
 ### Source Data and Database Management (Circle)
