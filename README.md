@@ -1,5 +1,7 @@
-# Launch-It
-A machine learning app to predict success in a business from the time of an IPO.
+<img src="https://github.com/pcar22/python_ml_practice/blob/python-3.22/Launch_IT_7.png" alt="drawing" width=1100 height=300/>
+
+<h1 align="center">A Machine learning model to predict success in a business from the time of an Initial Public Offering (IPO)</h1>
+<!---A machine learning model to predict success in a business from the time of an Initial Public Offering (IPO)-->
 
 ## What business would you like to start?
 The group was interested in IPO's for the past 4 years, to determine which sector, type of business or country affected the success.
