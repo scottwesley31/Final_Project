@@ -4,9 +4,13 @@
 <!---A machine learning model to predict success in a business from the time of an Initial Public Offering (IPO)-->
 
 ## What business would you like to start?
-The group was interested in IPO's for the past 4 years, to determine which sector, type of business or country affected the success.
->**This is a work in progress and _can/will_ change.**
+The group was interested in IPO's to determine if the type of industry affected the success.
 
+### Communication Plan
+
+  - **Platforms utilized for group discussions**: GitHub, Google Drive, Slack, Zoom
+
+The group held weekly meetings via Zoom, in addition to more frequent communication via Slack, and the group met in person.
 ## Dataset Description
 #### The yfinance package was used and yfinance is a python package that enables us to fetch historical market data from Yahoo Finance API in a Pythonic way. You must install yfinance prior to importing.
 If using jupyter notebook
@@ -14,12 +18,10 @@ If using jupyter notebook
 If using google colab
 ```!pip install yfinance``` 
 
-1. Identify the datasource
-    - Link: [The AWS link can be added here]
-    - Description:
-
-
->**This will also change, for now just experimenting**
+1. Datasource
+    - CSV files
+    - SQL database
+    - Yfinance
 
 
 
