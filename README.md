@@ -12,17 +12,19 @@ The group was interested in IPO's to determine if the type of industry affected 
 
 The group held weekly meetings via Zoom, in addition to more frequent communication via Slack, and the group met in person.
 ## Dataset Description
-#### The yfinance package was used and yfinance is a python package that enables us to fetch historical market data from Yahoo Finance API in a Pythonic way. You must install yfinance prior to importing.
-If using jupyter notebook
-```pip install yfinance```
-If using google colab
-```!pip install yfinance``` 
 
 1. Datasource
     - CSV files
     - SQL database
     - Yfinance
 
+
+
+#### The yfinance package was used and yfinance is a python package that enables us to fetch historical market data from Yahoo Finance API in a Pythonic way. You must install yfinance prior to importing.
+If using jupyter notebook
+```pip install yfinance```
+If using google colab
+```!pip install yfinance``` 
 
 
 ## Data exploration example below
