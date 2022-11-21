@@ -64,7 +64,7 @@ A `data_all` dataframe was created which merges the time-series stock data (`sto
 
 This dataframe consists of 649,726 rows which includes data from 1,577 tickers and their associated stock prices over the last 4 years (2019-2022).
 
-In order to filter this original table for only time-series data relevant to specific categories, two functions were created: the `create_stock_group_list` function and the `create_LSTM_df` function. The `create_stock_group_list` function generates a list of unique values within the column of interest (i.e. a list of all the industries, or sectors, or countries, etc). This resulting list was named `stock_groups`. The `create_LSTM_df` function creates a new dataframe which filters the original dataset for only relevant columns, sets the `Date` and column as the index, takes the median of all the stock prices at each date for the specified category, and then reformats the dataframe for the LSTM model.
+In order to filter this original table for only time-series data relevant to specific categories, two functions were created: the `create_stock_group_list` function and the `create_LSTM_df` function. The `create_stock_group_list` function generates a list of unique values within the column of interest (i.e. a list of all the industries, or sectors, or countries, etc). This resulting list was named `stock_groups`. The `create_LSTM_df` function creates a new dataframe which filters the original dataset for only relevant columns, sets the `Date` column as the index, takes the median of all the stock prices at each date for the specified category, and then reformats the dataframe for the LSTM model.
 
 Once the cleaned stock data dataframe is obtain and filtered for the category of interest, it is then run through an `LSTM_model` function. This function utilizes tools from numpy, tensorflow (keras), and sklearn to handle/reshape the data and to run it through a neural network with LSTM architecture. Here is an overview of the steps within this model:
 1) Obtain the filtered and cleaned dataframe of interest
@@ -75,5 +75,13 @@ Once the cleaned stock data dataframe is obtain and filtered for the category of
 6) Organize the results into a dataframe
 7) Plot the results (which includes the actual stock prices and the forcasted stock prices)
 8) Calculate the ROI based on projected future stock price and scale up to 1 year
+
+The last step in our machine learning process was to obtain the return on investment values from every category of interest (i.e. industry, sector, etc) and to generate a new dataframe with this information. This was accomplished by creating a dataframe which contains the list of unique values (`stock_groups`) defined earlier and appending the scaled ROI value obtained from the `LSTM_model` function. If it is unable to run the model function for any reason - and subsequently fail to calculate an ROI, the iteration generates a `NaN`.
+
+Here is an example of the resulting ROI dataframe - in this case the ROI was calculated from current and forecasted stock prices for each sector:
+
+![ROI_df](https://user-images.githubusercontent.com/107309793/202954251-a990fed6-752c-48fe-a2be-e16d38ae0135.png)
+
+The calculated ROI values can provide some insight to the user as to how investor perception of a company's ability to earn and grow might change in the near future. Since these companies are relatively new (IPO'd in the last 4 years), it may also indicate how a relatively new company might fare in the upcoming economic climate. The overall goal of this model is to forecast stock data in a way that could provide future entrepreneurs insight into which new companies are thriving (or not), what industries/sectors they're part of, and where they are in the world. 
 
 ### Use of Technologies and Front-End (X)
