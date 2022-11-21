@@ -60,5 +60,11 @@ If using google colab
 
 ### Machine Learning Model (Triangle)
 
+* Unsupervised Machine Learning: 
+
+#### Questionable..?
+
+* Supervised Machine Learning:
+
 
 ### Use of Technologies and Front-End (X)
