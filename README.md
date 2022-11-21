@@ -41,6 +41,7 @@ If using google colab
 <p>Once the above has been accomplished, based on user input our desire is to understand the qualitative correlations between features in the company information table to understand which features are most key for future business ventures to incorporate into their business plan.</p>
 
 ### Machine Learning Model (Triangle)
+After a few weeks of working with the historical stock price data from the companies which have IPO'd within the last four years, we were able to pinpoint a deep learning model (LSTM) which had the capability of forcasting how the future stock price of each company (ticker). LSTM stands for long short-term memory network and is a type of recurrent neural network (RNN). LSTM works in a piecewise fashion - but also is capable of processing the dataset as a whole. It maintains a memory cell known as a "cell state" which can be modified by other inputs
 
 
 ### Use of Technologies and Front-End (X)
