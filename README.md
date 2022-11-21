@@ -54,4 +54,26 @@ An overview of the structure of an LSTM neural network is shown below:
 
 LSTM is an optimal neural network model for our project because it accesses prior inputs (chucks on chronological stock price data in our case) and determines the most likely output (forecasted stock prices). It proceeds in a step-wise manner - taking into account what the stock prices were within a designated lookback period and predicting what the following (or forecasted) stock price is likely to be.
 
+In order to accomplish stock analysis predictions and therefore obtain growth rate (aka ROI or "return on investment"), a Python script was written to pull the time-series stock data and ticker specific information from the AWS database, merge the data into a single table, filter the table for stock data relevant to a specific category (such as industry or sector), and then to use this dataframe to run the LSTM model and make predictions on future stock prices. The script includes a function which calculates growth rate and scales it up to a projection 1 year out from the most recent adjusted close price.
+
+The full Python script can be accessed by opening the `Machine_Learning` folder and viewing the `LSTM - Final.ipynb` file. Here are a few highlights from the file:
+
+A `data_all` dataframe was created which merges the time-series stock data (`stock_data`) and the ticker info data (`info_data`) as seen here:
+
+![data_all_table](https://user-images.githubusercontent.com/107309793/202946638-a3560329-c61f-4599-af84-80de9917ede5.png)
+
+This dataframe consists of 649,726 rows which includes data from 1,577 tickers and their associated stock prices over the last 4 years (2019-2022).
+
+In order to filter this original table for only time-series data relevant to specific categories, two functions were created: the `create_stock_group_list` function and the `create_LSTM_df` function. The `create_stock_group_list` function generates a list of unique values within the column of interest (i.e. a list of all the industries, or sectors, or countries, etc). This resulting list was named `stock_groups`. The `create_LSTM_df` function creates a new dataframe which filters the original dataset for only relevant columns, sets the `Date` and column as the index, takes the median of all the stock prices at each date for the specified category, and then reformats the dataframe for the LSTM model.
+
+Once the cleaned stock data dataframe is obtain and filtered for the category of interest, it is then run through an `LSTM_model` function. This function utilizes tools from numpy, tensorflow (keras), and sklearn to handle/reshape the data and to run it through a neural network with LSTM architecture. Here is an overview of the steps within this model:
+1) Obtain the filtered and cleaned dataframe of interest
+2) Scale the data
+3) Generate input (lookback period) and output (forecast period) sequences. In our case, we chose a lookback period of 100 days and a forecast period of 60 days.
+4) Fit the LSTM model
+5) Predict the forecasts
+6) Organize the results into a dataframe
+7) Plot the results (which includes the actual stock prices and the forcasted stock prices)
+8) Calculate the ROI based on projected future stock price and scale up to 1 year
+
 ### Use of Technologies and Front-End (X)
