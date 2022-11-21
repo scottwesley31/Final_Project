@@ -19,12 +19,22 @@ The group held weekly meetings via Zoom, in addition to more frequent communicat
     - Yfinance
 
 
-
 #### The yfinance package was used and yfinance is a python package that enables us to fetch historical market data from Yahoo Finance API in a Pythonic way. You must install yfinance prior to importing.
 If using jupyter notebook
 ```pip install yfinance```
 If using google colab
 ```!pip install yfinance``` 
+
+1. Identify the datasource
+    - Stocks Analysis: Lists of recent IPO companies were downloaded from <a href="https://stockanalysis.com/ipos/">Stock Analysis</a>. These lists were combined and then used to gather financial data via the yfinance module.
+    - yfinance: The <a href="https://pypi.org/project/yfinance/">yfinance</a> library can be used to download market data via Yahoo! Finance API, though the library itself is not owned, managed, or affiliated with Yahoo!. All historical market data was downloaded for each recent (since 2018) IPO company, along with additional qualitative, categorical data.
+    - AWS: The data was then cleaned and uploaded to tables in an AWS Database (Launch-IT). There were initially two tables, and then eventually a third table was loaded from the raw data. The LSTM Machine Learning predictive model generated future stock price projected medians for each industry, which were then addtionally loaded into the database. In an effort to compare the stock price projections with the historical revenue growth figures, a temporary SQL table was created and then used to JOIN the industry projections with the average revenue growths per industry:
+    <img src="https://github.com/scottwesley31/Final_Project/blob/main/images/SQL_joins.png" alight='right'>
+    The temp method was used in this case to ease the memory constraints of the initial view created, as it would no longer be needed once the ROI information was joined to the Industry and revenue growth table. The final table, containing both revenue growth and projected stock price changes, may give the user additional insight into industry performance and how well various metrics may correlate to a successful business/investment venture.
+
+
+>**This will also change, for now just experimenting**
+
 
 
 ## Data exploration example below
@@ -35,6 +45,11 @@ If using google colab
   - DataFrames were created based on the datasets harvested of historical stock data and qualitative compnay information.
   - Dropped null data from dataframe.
   - The dataframes were both loaded to separate tables in an AWS database for the team to use in creation of ML models.
+
+
+## Week One: 
+
+### Repository Management (Square)
 
 
 ### Source Data and Database Management (Circle)
