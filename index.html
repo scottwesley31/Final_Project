@@ -13,7 +13,7 @@
         />
         <link rel="stylesheet" href="static/css/style.css"> 
     </head>
-    <body style="backgraund-color:black;">
+    <body style="background-color:black;">
         <div class = "wrapper">
             <!-- NAVBAR -->
             <nav class = "navbar navbar-dark black navbar-expand-lg">
@@ -21,9 +21,7 @@
             </nav> 
             <!-- JUMBOTRON -->  
             <div class = "jumbotron">
-                <div class = "container" style="height: 500px;">...</div>
-                
-                
+                <div class = "container" style="height: 500px;">...</div>   
             </div>
 
             <!-- Artilce title and paragraph-->
@@ -44,18 +42,14 @@
                 </div>
             </div>
             <!--FILTER-->
-            <div class = "container-fluid">
-                <div class = "row">
-                    <div class = "col-md-3">
-                        <form class = "black">
-                            <p>Filter Search</p>
-                            <ul class = "list-group black">
-                                <li class "black">
-                                    <label for = "Industry">Enter Industry</label>
-                                    <input type = "text" placeholder =  id = "datetime" />
-                                    <select></select>
-                                </li>
-                                <ul class = "list-group black">
+            <div class="row">
+                <div class="col-md-2">
+                  <div class="well">
+                    <h5>Select Industry</h5>
+                    <!-- <select id="selDataset"></select> -->
+                    <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                  </div>
+                                <!-- <ul class = "list-group black">
                                     <li class = "black">
                                         <label for = "Company">Enter a Company</label>
                                         <input type = "text" id = "shape"/>
@@ -84,16 +78,16 @@
                                     <label for = "Year">Enter a Year</label>
                                     <input type = "text" id = "shape"/>
                                     <select></select>
-                                </li>
+                                </li> 
                                 <li class = "black">
                                     <button id = "filter-btn" type = "button" class = "black">
                                     Reset Table
                                     </button>
-                                </li>
+                                </li>-->
                             </ul></ul></ul></ul></ul>
                         </form>
                     </div>
-                    <!--TABLE-->
+                    <!-- TABLE
                     <div class = "col-md-9">
                         <table class = "table table-striped">
                             <thead>
@@ -110,12 +104,12 @@
                             </thead>
                             <tbody></tbody>
                         </table>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-        <script src="static/js/data.js"></script>
-        <script src="static/js/app.js"></script>
+        <script src="static/js/industry_data2.json"></script>
+        <script src="static/js/webpage.js"></script>
     </body>
 </html>
