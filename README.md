@@ -120,12 +120,40 @@ After the model has trained using the `X` and `Y` lists, the following code bloc
 
 In this case, the very last set of 100-days is used to generate an associated 60-day `Y`. The predicted 60-day chunk of stock prices are the forecast; stock prices that extend past the most recent date.
 
+Here are a few examples of a plot which includes the actual stock price data and the resulting forecasted stock prices generated from the LSTM model:
+
+**Sector Example**
+![Basic_Materials_chart](https://user-images.githubusercontent.com/107309793/203425587-a16cdde6-cbac-4ac6-b48f-04173d74e22b.png)
+
+**Industry Example**
+![Oil_Gas_Chart](https://user-images.githubusercontent.com/107309793/203426056-c5647e2b-8652-48d3-8e02-60d70830b276.png)
+
+**Country Example**
+![China_chart](https://user-images.githubusercontent.com/107309793/203426077-2df18740-d5cb-499a-ac8b-4b2234788d41.png)
+
 The last step in our machine learning process was to obtain the return on investment values from every category of interest (i.e. industry, sector, etc) and to generate a new dataframe with this information. This was accomplished by creating a dataframe which contains the list of unique values (`stock_groups`) defined earlier and appending the scaled ROI value obtained from the `LSTM_model` function. If it is unable to run the model function for any reason - and subsequently fail to calculate an ROI, the iteration generates a `NaN`.
 
 Here is an example of the resulting ROI dataframe - in this case the ROI was calculated from current and forecasted stock prices for each sector:
 
 ![ROI_df](https://user-images.githubusercontent.com/107309793/202954251-a990fed6-752c-48fe-a2be-e16d38ae0135.png)
 
-The calculated ROI values can provide some insight to the user as to how investor perception of a company's ability to earn and grow might change in the near future. Since these companies are relatively new (IPO'd in the last 4 years), it may also indicate how a relatively new company might fare in the upcoming economic climate. The overall goal of this model is to forecast stock data in a way that could provide future entrepreneurs insight into which new companies are thriving (or not), what industries/sectors they're part of, and where they are in the world. 
+The calculated ROI values can provide some insight to the user as to how investor perception of a company's ability to earn and grow might change in the near future. Since these companies are relatively new (IPO'd in the last 4 years), it may also indicate how a relatively new company might fare in the upcoming economic climate. The overall goal of this model is to forecast stock data in a way that could provide future entrepreneurs insight into which new companies are thriving (or not), what industries/sectors they're part of, and where they are in the world.
+
+#### Limitations and Benefits
+Traditional recurrent neural networks (RNNs) require long-term information to travel sequentially through all cells prior to getting to the processing cell. LSTM models improve this process by enforcing switch gates which allow for information to bypass units and still retain a memory. Despite this improvement, this model still requires a lot of resources (memory) and time to run the model. LSTM models are also quite prone to overfitting. Read more about the advantages and disadvantages of LSTM networks [here](https://www.geeksforgeeks.org/understanding-of-lstm-networks/).
+
+Some other notable limitations of our LSTM model:
+1) A very small current stock price followed by a significantly larger forecasted stock price resulted in exaggerated magnitudes of ROI.
+
+The Chemicals industry produced an outlier ROI. Here are the stock prices the model generated:
+
+![chemicals_issue](https://user-images.githubusercontent.com/107309793/203441589-63dc8902-00e8-41cd-a0df-cdf0a817b81c.png)
+
+Plugging this into our ROI equation:
+(-1.08-0.002)/0.002 = -53
+
+The majority of the data generated ROI's that were between -2 and 2 (prior to being scaled). This is a fundamental issue with our generalization that the calculated ROI always indicates growth. Mathematically - it doesn't always work out.
+
+2) The time-series data was grouped into categories and the median value of all stock prices at a single date was chosen to represent the overall price of every ticker within this category. This generalization does not account for variations in the distribution of these prices which could be affected by outliers or missing data.
 
 ### Use of Technologies and Front-End (X)
