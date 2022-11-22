@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>"LaunchIT"</title>
+        <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="static/css/style.css"> 
+    </head>
+    <body style="background-color:black;">
+        <div class = "wrapper">
+            <!-- NAVBAR -->
+            <nav class = "navbar navbar-dark black navbar-expand-lg">
+                <a class = "navbar-brand" href = "index.html">Think Big Search Smart</a>
+            </nav> 
+            <!-- JUMBOTRON -->  
+            <div class = "jumbotron">
+                <div class = "container" style="height: 500px;">...</div>   
+            </div>
+
+            <!-- Artilce title and paragraph-->
+            <div class = "container-fluid">
+                <div class = "row">
+                    <div class = "col-md-4 article-title">
+                        <h1 class = "display-4">Startup?</h1>
+                        <h3><small>How companies are doing?</small></h3>
+                        <p>Use the interactive charts below to explore the dataset</p>
+                    </div>
+                    <div class = "col-md-8 article-p">
+                        <p>A startup is the living embodiment of a founder’s dream, It represents the journey from concept to reality. It is one of the few times when you can take something that is only a dream and make it a reality, not just for yourself, but for the entire world.
+                           Both startup owners, definitions of what a startup is are examples of big-picture thinking; a big-tent approach to defining “startup.” But there’s another side to the definition of “startup:” the nitty-gritty. The details. The little things that make one company a startup and another a small business and another a corporation.
+
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--FILTER-->
+            <div class="row">
+                <div class="col-md-2">
+                  <div class="well">
+                    <h5>Select Industry</h5>
+                    <!-- <select id="selDataset"></select> -->
+                    <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                  </div>
+                                <!-- <ul class = "list-group black">
+                                    <li class = "black">
+                                        <label for = "Company">Enter a Company</label>
+                                        <input type = "text" id = "shape"/>
+                                        <select></select>
+                                    </li>   
+                            <ul class = "list-group black">
+                                <li class = "black">
+                                    <label for = "city">Enter a City</label>
+                                    <input type = "text" placeholder = id = "city"/>
+                                    <select></select>
+                                </li>
+                            <ul class = "list-group black">
+                                <li class = "black">
+                                    <label for = "state">Enter a State</label>
+                                    <input type = "text" placeholder =  id = "state"/>
+                                    <select></select>
+                                </li>
+                            <ul class = "list-group black">
+                                <li class = "black">
+                                    <label for = "country">Enter a Country</label>
+                                    <input type = "text" placeholder =  id = "country"/>
+                                    <select></select>
+                                </li>
+                            <ul class = "list-group black">
+                                <li class = "black">
+                                    <label for = "Year">Enter a Year</label>
+                                    <input type = "text" id = "shape"/>
+                                    <select></select>
+                                </li> 
+                                <li class = "black">
+                                    <button id = "filter-btn" type = "button" class = "black">
+                                    Reset Table
+                                    </button>
+                                </li>-->
+                            </ul></ul></ul></ul></ul>
+                        </form>
+                    </div>
+                    <!-- TABLE
+                    <div class = "col-md-9">
+                        <table class = "table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Industry</th>
+                                    <th>Company</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Country</th>
+                                    <th>Year</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+        <script src="static/js/industry_data2.json"></script>
+        <script src="static/js/webpage.js"></script>
+    </body>
+</html>
