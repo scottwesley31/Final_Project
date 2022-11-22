@@ -47,8 +47,6 @@ If using google colab
   - The dataframes were both loaded to separate tables in an AWS database for the team to use in creation of ML models.
 
 
-## Week One: 
-
 ### Repository Management (Square)
 
 
@@ -59,6 +57,9 @@ If using google colab
 <p>Once the above has been accomplished, based on user input our desire is to understand the qualitative correlations between features in the company information table to understand which features are most key for future business ventures to incorporate into their business plan.</p>
 
 ### Machine Learning Model (Triangle)
+
+#### Preliminary Stages
+
 Since the primary objective of our project was to determine specific features within businesses that IPO'd within the last four years which contribute to their overall success, we started off with a dataset which included stock price time-series data for said business, as well as additional columns which could have importance in how the business functions (or how fiscally successful it was). These columns - which were merged onto the time-series data by the unique tickers - included sector, industry, country, growth rate, debt to equity, current ratio, and forward PE.
 
 The first stages of our machine learning involved a lot of exploration being that we hadn't determined a way to properly define "success" in terms of the data that was available to us to merge together for the businesses we were looking into. We weren't sure if we should have considered supervised ML because our target data was unclear. We were also unsure if the dataset we had (which at this point consisted of 649,726 rows and 15 columns) could generate clustering through unsupervised ML methods in a way that would have any meaning. We split up and had one group member go the supervised learning route while having another member attempt unsupervised learning.
@@ -68,6 +69,8 @@ This exploration period demonstrated that our preliminary dataset was inappropri
 **(Forecasted stock price - Most recent stock price)/(Most recent stock price)**
 
 The calculated ROI for each business could then be merged into the business features specific dataset by ticker and then used as a target in supervised ML. A positive ROI could generally indicate a business projected to be "successful" accourding to our model, while a negative ROI could indicate an "unsuccessful" business. These generalizations on the calculated ROI provided us with labeled data in the context of business success.
+
+#### Long Short-Term Memory Network (LSTM)
 
 After a few weeks of working with the historical stock price data from the companies which have IPO'd within the last four years, we were able to pinpoint a deep learning model which had the capability of forcasting the future stock price of each company (ticker). LSTM stands for long short-term memory network and is a type of recurrent neural network (RNN). LSTM works in a piecewise fashion - but also is capable of processing the dataset as a whole. It maintains a memory cell known as a "cell state" which allows previous outputs to be used as inputs. Information can be added or removed from the cell state and this process is regulated by "gates". LSTM is common for processing time-series data and generally has the following architecture:
 
@@ -103,6 +106,19 @@ Once the cleaned stock data dataframe is obtain and filtered for the category of
 6) Organize the results into a dataframe
 7) Plot the results (which includes the actual stock prices and the forcasted stock prices)
 8) Calculate the ROI based on projected future stock price and scale up to 1 year
+
+#### Training and Testing Sets
+The LSTM model works by looking at the data in a step-wise fashion. Here is the code block that handles the adjusted close values (after having been scaled) and splits them up into relevant chunks:
+
+![LSTM_training_set](https://user-images.githubusercontent.com/107309793/203419189-dda9c6cd-23a7-4b3f-8140-30af3c69e4c6.png)
+
+This code defines the input sequence (`n_lookback`) as a 100-day chunk and the output sequence (`n_forecast`) as a 60-day chunk. The for loop pairs these two input and output chunks together; the 100-day chunk results in its subsequent 60-day chunk. In the context of the adjusted close prices - the first 100 trading days are observed and related to the subsequent 60 trading day prices afterwords. The for loop continues to the next 100-day and 60-day pair until it reaches the end of all the values (`len(y)`). Each of these data chuncks are appended into separate lists which are used to train the model on. `X` represents all of the 100-day stock price chunks and `Y` represents all of their associated 60-day stock price chunks that follow. `Y` can be thought of as the target variable for `X`.
+
+After the model has trained using the `X` and `Y` lists, the following code block generates the testing dataset (the forecasts):
+
+![LSTM_testing_set](https://user-images.githubusercontent.com/107309793/203420779-6b14e682-e6cb-4ad7-bcd1-490d40913066.png)
+
+In this case, the very last set of 100-days is used to generate an associated 60-day `Y`. The predicted 60-day chunk of stock prices are the forecast; stock prices that extend past the most recent date.
 
 The last step in our machine learning process was to obtain the return on investment values from every category of interest (i.e. industry, sector, etc) and to generate a new dataframe with this information. This was accomplished by creating a dataframe which contains the list of unique values (`stock_groups`) defined earlier and appending the scaled ROI value obtained from the `LSTM_model` function. If it is unable to run the model function for any reason - and subsequently fail to calculate an ROI, the iteration generates a `NaN`.
 
