@@ -19,7 +19,6 @@ The group held weekly meetings via Zoom, in addition to more frequent communicat
     - SQL database
     - Yfinance
 
-
 #### The yfinance package was used and yfinance is a python package that enables us to fetch historical market data from Yahoo Finance API in a Pythonic way. You must install yfinance prior to importing.
 If using jupyter notebook
 ```pip install yfinance```
