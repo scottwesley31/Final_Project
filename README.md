@@ -8,7 +8,7 @@ The group was interested in IPO's to determine if the type of industry affected 
 
 ### Communication Plan
 
-  - **Platforms utilized for group discussions**: GitHub, Google Drive, Slack, Zoom
+  - **Platforms utilized for group discussions**: GitHub, Google Drive, Slack, Zoom, google meet.
 
 The group held weekly meetings via Zoom, in addition to more frequent communication via Slack, and the group met in person.
 ## Dataset Description

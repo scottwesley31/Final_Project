@@ -11,9 +11,9 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="static/css/style.css"> 
+        <link rel="stylesheet" href="style.css"> 
     </head>
-    <body style="backgraund-color:black;">
+    <body style="background-color:black;">
         <div class = "wrapper">
             <!-- NAVBAR -->
             <nav class = "navbar navbar-dark black navbar-expand-lg">
@@ -21,9 +21,7 @@
             </nav> 
             <!-- JUMBOTRON -->  
             <div class = "jumbotron">
-                <div class = "container" style="height: 500px;">...</div>
-                
-                
+                <div class = "container" style="height: 500px;">...</div>   
             </div>
 
             <!-- Artilce title and paragraph-->
@@ -35,87 +33,149 @@
                         <p>Use the interactive charts below to explore the dataset</p>
                     </div>
                     <div class = "col-md-8 article-p">
-                        <p>A startup is the living embodiment of a founder’s dream, It represents the journey from concept to reality. It is one of the few times when you can take something that is only a dream and make it a reality, not just for yourself, but for the entire world.
-                           Both startup owners, definitions of what a startup is are examples of big-picture thinking; a big-tent approach to defining “startup.” But there’s another side to the definition of “startup:” the nitty-gritty. The details. The little things that make one company a startup and another a small business and another a corporation.
-
-                            
+                        <p>A startup is the living embodiment of a founder’s dream, It represents the 
+                            journey from concept to reality. It is one of the few times when you can 
+                            take something that is only a dream and make it a reality, not just for 
+                            yourself, but for the entire world.
+                           Both startup owners, definitions of what a startup is are examples of 
+                           big-picture thinking; a big-tent approach to defining “startup.” But there’s 
+                           another side to the definition of “startup:” the nitty-gritty. The details. 
+                           The little things that make one company a startup and another a small 
+                           business and another a corporation.    
                         </p>
                     </div>
                 </div>
             </div>
             <!--FILTER-->
-            <div class = "container-fluid">
-                <div class = "row">
-                    <div class = "col-md-3">
-                        <form class = "black">
-                            <p>Filter Search</p>
-                            <ul class = "list-group black">
-                                <li class "black">
-                                    <label for = "Industry">Enter Industry</label>
-                                    <input type = "text" placeholder =  industry />
-                                    <select id = "selDataset" onchange = "optionChanged(this.value)"></select>
-                                </li>
-                                <!-- <ul class = "list-group black">
-                                    <li class = "black">
-                                        <label for = "Company">Enter a Company</label>
-                                        <input type = "text" id = "shape"/>
-                                        <select></select>
-                                    </li>   
-                            <ul class = "list-group black">
-                                <li class = "black">
-                                    <label for = "city">Enter a City</label>
-                                    <input type = "text" placeholder = id = "city"/>
-                                    <select></select>
-                                </li>
-                            <ul class = "list-group black">
-                                <li class = "black">
-                                    <label for = "state">Enter a State</label>
-                                    <input type = "text" placeholder =  id = "state"/>
-                                    <select></select>
-                                </li>
-                            <ul class = "list-group black">
-                                <li class = "black">
-                                    <label for = "country">Enter a Country</label>
-                                    <input type = "text" placeholder =  id = "country"/>
-                                    <select></select>
-                                </li>
-                            <ul class = "list-group black">
-                                <li class = "black">
-                                    <label for = "Year">Enter a Year</label>
-                                    <input type = "text" id = "shape"/>
-                                    <select></select>
-                                </li> 
-                                <li class = "black">
-                                    <button id = "filter-btn" type = "button" class = "black">
-                                    Reset Table
-                                    </button>
-                                </li>-->
-                            </ul></ul></ul></ul></ul>
-                        </form>
+            <!--<div class="row">
+                <div class="col-md-2">
+                  <div class="well">
+                    <h5>Select Industry</h5> -->
+                    <div class="col-md-3">
+                        <div class="form-input" id="age_input">
+                            <br>
+                            <label for="Industry">Industry:</label>
+                            <br>
+                            <select id="age" name="age">
+                                <option selected value="Industry">Please Make A Selection:</option>
+                                <option value="1">Chemicals</option>
+                                <option value="2">Oil & Gas E&P</option>
+                                <option value="3">Biotechnology</option>
+                                <option value="4">Software—Application</option>
+                                <option value="5">Aerospace & Defense</option>
+                                <option value="6">Capital Markets</option>
+                                <option value="7">Auto & Truck Dealerships</option>
+                                <option value="8">REIT—Retail</option>
+                                <option value="9">Computer Hardware</option>
+                                <option value="10">Semiconductors</option>
+                                <option value="11">Rental & Leasing Services</option>
+                                <option value="12">Internet Content & Information</option>
+                                <option value="13">Specialty Retail</option>
+                                <option value="14">Medical Devices</option>
+                                <option value="15">Diagnostics & Research</option>
+                                <option value="16">Banks—Regional</option>
+                                <option value="17">Real Estate Services</option>
+                                <option value="18">Medical Care Facilities</option>
+                                <option value="19">Education & Training Services</option>
+                                <option value="20">Packaged Foods</option>
+                                <option value="21">Health Information Services</option>
+                                <option value="22">Insurance Brokers</option>
+                                <option value="23">Credit Services</option>
+                                <option value="24">Leisure</option>
+                                <option value="25">Medical Instruments & Supplies</option>
+                                <option value="26">Software—Infrastructure</option>
+                                <option value="27">Information Technology Services</option>
+                                <option value="28">Asset Management</option>
+                                <option value="29">Restaurants</option>
+                                <option value="30">Drug Manufacturers—Specialty & Generic</option>
+                                <option value="31">Oil & Gas Drilling</option>
+                                <option value="32">Electronic Gaming & Multimedia</option>
+                                <option value="33">Solar</option>
+                                <option value="34">Shell Companies</option>
+                                <option value="35">Broadcasting</option>
+                                <option value="36">Luxury Goods</option>
+                                <option value="37">Communication Equipment</option>
+                                <option value="38">Grocery Stores</option>
+                                <option value="39">Internet Retail</option>
+                                <option value="40">Specialty Chemicals</option>
+                                <option value="41">REIT—Office</option>
+                                <option value="42">Staffing & Employment Services</option>
+                                <option value="43">Metal Fabrication</option>
+                                <option value="44">Specialty Industrial Machinery</option>
+                                <option value="45">Tobacco</option>
+                                <option value="46">Insurance—Property & Casualty</option>
+                                <option value="47">Apparel Manufacturing</option>
+                                <option value="48">Coking Coal</option>
+                                <option value="49">Utilities—Regulated Gas</option>
+                                <option value="50">Personal Services</option>
+                                <option value="51">Insurance—Life</option>
+                                <option value="52">Travel Services</option>
+                                <option value="53">Farm & Heavy Construction Machinery</option>
+                                <option value="54">Recreational Vehicles</option>
+                                <option value="55">Gambling</option>
+                                <option value="56">Other Precious Metals & Mining</option>
+                                <option value="57">Mortgage Finance</option>
+                                <option value="58">Trucking</option>
+                                <option value="59">REIT—Diversified</option>
+                                <option value="60">Food Distribution</option>
+                                <option value="61">Electronic Components</option>
+                                <option value="62">Packaging & Containers</option>
+                                <option value="63">Furnishings, Fixtures & Appliances</option>
+                                <option value="64">Auto Manufacturers</option>
+                                <option value="65">Real Estate—Development</option>
+                                <option value="66">Farm Products</option>
+                                <option value="67">Waste Management</option>
+                                <option value="68">Insurance—Specialty</option>
+                                <option value="69">Financial Data & Stock Exchanges</option>
+                                <option value="70">Building Products & Equipment</option>
+                                <option value="71">Telecom Services</option>
+                                <option value="72">Entertainment</option>
+                                <option value="73">Advertising Agencies</option>
+                                <option value="74">Pharmaceutical Retailers</option>
+                                <option value="75">REIT—Mortgage</option>
+                                <option value="76">Beverages—Wineries & Distilleries</option>
+                                <option value="77">Banks—Diversified</option>
+                                <option value="78">Pollution & Treatment Controls</option>
+                                <option value="79">Other Industrial Metals & Mining</option>
+                                <option value="80">Apparel Retail</option>
+                                <option value="81">Home Improvement Retail</option>
+                                <option value="82">Utilities—Renewable</option>
+                                <option value="83">Healthcare Plans</option>
+                                <option value="84">Utilities—Regulated Water</option>
+                                <option value="85">Beverages—Non-Alcoholic</option>
+                                <option value="86">Specialty Business Services</option>
+                                <option value="87">Footwear & Accessories</option>
+                                <option value="88">Household & Personal Products</option>
+                                <option value="89">Electronics & Computer Distribution</option>
+                                <option value="90">Industrial Distribution</option>
+                                <option value="91">Lodging</option>
+                                <option value="92">Consulting Services</option>
+                                <option value="93">Insurance—Diversified</option>
+                                <option value="94">Consumer Electronics</option>
+                                <option value="95">Airlines</option>
+                                <option value="96">REIT—Specialty</option>
+                                <option value="97">Electrical Equipment & Parts</option>
+                                <option value="98">Engineering & Construction</option>
+                                <option value="99">Marine Shipping</option>
+                                <option value="100">Steel</option>
+                                <option value="101">Utilities—Diversified</option>
+                                <option value="102">Residential Construction</option>
+                                <option value="103">Auto Parts</option>
+                                <option value="104">Copper</option>
+                                <option value="105">Scientific & Technical Instruments</option>
+                                <option value="106">Oil & Gas Equipment & Services</option>
+                                <option value="107">Gold</option>
+                                <option value="108">Railroads</option>
+                                <option value="109">Security & Protection Services</option>
+                                </select>
+                        </div>
                     </div>
-                    <!-- TABLE
-                    <div class = "col-md-9">
-                        <table class = "table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Industry</th>
-                                    <th>Company</th>
-                                    <th>City</th>
-                                    <th>State</th>
-                                    <th>Country</th>
-                                    <th>Year</th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div> -->
+                   <!--  <select name ="selDataset" onchange="optionChanged(this.value)"></select>
+                  </div>
                 </div>
-            </div>
-        </div>
+            </div>  -->
+        </div> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-        <script src="static/js/industry_data.js"></script>
-        <script src="static/js/app.js"></script>
+        <script src="webpage.js"></script>
     </body>
 </html>

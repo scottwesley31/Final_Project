@@ -1,0 +1,25 @@
+body{
+    color: #f7f7f7;
+   background-color: black; 
+}
+
+.jumbotron {
+    background-image: url("Launch_IT_7.png");
+    background-size: 100% 100%;
+    text-align: cover;
+    
+  }
+  .article-title, .article-p {
+    padding: 50px;
+  }
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  form {
+    padding: 5em;
+  }
+  
+  #filter-btn {
+    width: 100%;
+  }
