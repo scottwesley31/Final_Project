@@ -4,7 +4,7 @@
 <!---A machine learning model to predict success in a business from the time of an Initial Public Offering (IPO)-->
 
 ## What business would you like to start?
-The group was interested in IPO's to determine if the type of industry affected the success.
+The group was interested in IPO's in order to determine if the type of industry or sector affected the success of a business going public.
 
 ### Communication Plan
 
@@ -33,10 +33,7 @@ If using google colab
     The temp method was used in this case to ease the memory constraints of the initial view created, as it would no longer be needed once the ROI information was joined to the Industry and revenue growth table. The final table, containing both revenue growth and projected stock price changes, may give the user additional insight into industry performance and how well various metrics may correlate to a successful business/investment venture.
 
 
->**This will also change, for now just experimenting**
-
-
-
+>
 ## Data exploration example below
   - The csv files were imported, and variables were created and the data was cleaned.
   - Pandas DataFrame was created.
