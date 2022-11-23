@@ -15,9 +15,9 @@ The group held weekly meetings via Zoom, in addition to more frequent communicat
 
 1. Datasource
     - CSV files
+    - Amazon Web Services (AWS)
     - SQL database
     - Yfinance
-
 
 #### The yfinance package was used and yfinance is a python package that enables us to fetch historical market data from Yahoo Finance API in a Pythonic way. You must install yfinance prior to importing.
 If using jupyter notebook
@@ -43,8 +43,6 @@ If using google colab
   - Dropped null data from dataframe.
   - The dataframes were both loaded to separate tables in an AWS database for the team to use in creation of ML models.
 
-
-### Repository Management (Square)
 
 
 ### Source Data and Database Management (Circle)
