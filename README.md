@@ -6,6 +6,8 @@
 ## What business would you like to start?
 The group was interested in IPO's in order to determine if the type of industry or sector affected the success of a business going public.
 
+For a slide deck of this project visit this [Google Slides link](https://docs.google.com/presentation/d/10ODRaUkzxV-3JsMyl3P4I6_CyOXfWSH1F9iAA2SzAgo/edit?usp=sharing).
+
 ### Communication Plan
 
   - **Platforms utilized for group discussions**: GitHub, Google Drive, Slack, Zoom, google meet.
